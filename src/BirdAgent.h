@@ -25,8 +25,9 @@ public:
     ofPoint closestAgentCoords;
     int id;
     void interactWithClosestAgent();
-    Agent * closestAgent;
+    BirdAgent * closestBird;
     float size;
+    float attraction;
 };
 
 

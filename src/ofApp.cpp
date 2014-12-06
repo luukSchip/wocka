@@ -9,10 +9,10 @@ void ofApp::setup(){
     for (int i = 0; i < NUM_AGENTS; i++) {
         //float xPos = ofRandom(ofGetWindowWidth());
         //float yPos = ofRandom(ofGetWindowHeight());
-//        float xPos = ofGetWindowWidth()/2;
-//        float yPos = ofGetWindowHeight()/2;
-        float xPos = ofGetWindowWidth()/2 + ofRandom(100) - 50;
-        float yPos = ofGetWindowHeight()/2 + ofRandom(100) - 50;
+        float xPos = ofGetWindowWidth()/2;
+        float yPos = ofGetWindowHeight()/2;
+        //float xPos = ofGetWindowWidth()/2 + ofRandom(100) - 50;
+        //float yPos = ofGetWindowHeight()/2 + ofRandom(100) - 50;
         BirdAgent birdAgent;
         birdAgent.init(i, xPos,yPos);
         birdAgents[i] = birdAgent;

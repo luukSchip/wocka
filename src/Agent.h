@@ -18,6 +18,7 @@ class Agent {
     static const int SPEED = 4;
     
 public:
+    virtual void henk(){};
     float xPos, yPos;
     void adjustToBounds(float *value,float min,float max);
     Agent();
@@ -34,6 +35,7 @@ public:
     Agent * closestAgent;
     float size;
     float r,g,b;
+    
 };
 
 
