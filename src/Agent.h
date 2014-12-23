@@ -12,10 +12,16 @@
 #include <iostream>
 #include <algorithm>    // std::max
 #include "ofMain.h"
+#include "World.h"
 
+
+class World;
+class WorldBlock;
 class Agent {
     static const int MAX_INTERACT_DIST = 50;
     static const int SPEED = 4;
+private:
+    WorldBlock *worldBlock = NULL;
     
 public:
     virtual void henk(){};
@@ -23,7 +29,7 @@ public:
     void adjustToBounds(float *value,float min,float max);
     Agent();
     float direction;
-    void init(int, float, float);
+    void init(int, float, float, World *_world);
     void updatePosition();
     float getXPos(){return xPos;};
     float getYPos(){return yPos;};
@@ -35,7 +41,9 @@ public:
     Agent * closestAgent;
     float size;
     float r,g,b;
-    
+    void interactWithWorld();
+    World *world;
+    void setWorldBlock(WorldBlock *_worldBlock);
 };
 
 

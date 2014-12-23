@@ -10,7 +10,8 @@
 #define __firstSketch__AttractorAgent__
 
 #include <iostream>
-#include "Agent.h"
+#include "Agent.h"  
+
 class AttractorAgent : public Agent{
 public:
     void updatePosition();

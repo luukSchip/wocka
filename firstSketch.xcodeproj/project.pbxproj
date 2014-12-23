@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		188398961A1D0068000F19F2 /* BirdAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188398941A1D0068000F19F2 /* BirdAgent.cpp */; };
 		188398991A1D1F3C000F19F2 /* AttractorAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188398971A1D1F3C000F19F2 /* AttractorAgent.cpp */; };
+		188843371A3495E4009395DD /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188843351A3495E4009395DD /* World.cpp */; };
+		1888433A1A349990009395DD /* WorldBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 188843381A349990009395DD /* WorldBlock.cpp */; };
 		18BBE2511A1BDA8200C7BF29 /* Agent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18BBE24F1A1BDA8200C7BF29 /* Agent.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -66,6 +68,10 @@
 		188398951A1D0068000F19F2 /* BirdAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdAgent.h; sourceTree = "<group>"; };
 		188398971A1D1F3C000F19F2 /* AttractorAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttractorAgent.cpp; sourceTree = "<group>"; };
 		188398981A1D1F3C000F19F2 /* AttractorAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractorAgent.h; sourceTree = "<group>"; };
+		188843351A3495E4009395DD /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		188843361A3495E4009395DD /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		188843381A349990009395DD /* WorldBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldBlock.cpp; sourceTree = "<group>"; };
+		188843391A349990009395DD /* WorldBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBlock.h; sourceTree = "<group>"; };
 		18BBE24F1A1BDA8200C7BF29 /* Agent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Agent.cpp; sourceTree = "<group>"; };
 		18BBE2501A1BDA8200C7BF29 /* Agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agent.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -198,6 +204,10 @@
 				188398951A1D0068000F19F2 /* BirdAgent.h */,
 				188398971A1D1F3C000F19F2 /* AttractorAgent.cpp */,
 				188398981A1D1F3C000F19F2 /* AttractorAgent.h */,
+				188843351A3495E4009395DD /* World.cpp */,
+				188843361A3495E4009395DD /* World.h */,
+				188843381A349990009395DD /* WorldBlock.cpp */,
+				188843391A349990009395DD /* WorldBlock.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -300,9 +310,11 @@
 			files = (
 				188398991A1D1F3C000F19F2 /* AttractorAgent.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				188843371A3495E4009395DD /* World.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				188398961A1D0068000F19F2 /* BirdAgent.cpp in Sources */,
 				18BBE2511A1BDA8200C7BF29 /* Agent.cpp in Sources */,
+				1888433A1A349990009395DD /* WorldBlock.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

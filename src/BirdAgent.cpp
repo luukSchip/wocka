@@ -8,9 +8,7 @@
 
 #include "BirdAgent.h"
 
-BirdAgent::BirdAgent(){}
-
-void BirdAgent::init(int id, float x, float y){
+void BirdAgent::init(int id, float x, float y, World * _world){
     xPos = x;
     yPos = y;
     direction = 1;
@@ -19,6 +17,7 @@ void BirdAgent::init(int id, float x, float y){
     r = 240;
     g = 150;
     b = 150;
+    world = _world;
 }
 
 void BirdAgent::updatePosition(){
@@ -58,7 +57,9 @@ void BirdAgent::interact(Agent * otherAgent){
 void BirdAgent::draw(){
     ofSetColor(r, b, b, 50);
     //ofLine(xPos, yPos, closestAgent->getXPos(), closestAgent->getYPos());
-    ofCircle(xPos, yPos, (attraction + 0.501) * 30);
+    ofFill();
+    //ofCircle(xPos, yPos, (attraction + 0.501) * 30);
+    ofCircle(xPos, yPos, 2);
 }
 
 void BirdAgent::interactWithClosestAgent(){

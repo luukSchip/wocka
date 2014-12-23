@@ -8,9 +8,11 @@
 
 #include "Agent.h"
 
-Agent::Agent(){}
 
-void Agent::init(int id, float x, float y){
+Agent::Agent(){
+}
+
+void Agent::init(int id, float x, float y,World * _world){
     xPos = x;
     yPos = y;
     direction = 0;
@@ -18,6 +20,7 @@ void Agent::init(int id, float x, float y){
     r = 240;
     g = 150;
     b = 150;
+    world = _world;
 }
 
 void Agent::updatePosition(){}
@@ -36,4 +39,15 @@ void Agent::draw(){}
 
 void Agent::interactWithClosestAgent(){}
 
+void Agent::interactWithWorld(){
+    world->updateAgent(this);
+}
+
+void Agent::setWorldBlock(WorldBlock* _worldBlock){
+    if(worldBlock != NULL){
+        worldBlock->removeAgent(this);
+    }
+    worldBlock = _worldBlock;
+    worldBlock->addAgent(this);
+}
 

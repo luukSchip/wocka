@@ -16,9 +16,8 @@
 class BirdAgent : public Agent {
     
 public:
-    BirdAgent();
     float direction;
-    void init(int, float, float);
+    void init(int, float, float,World * _world);
     void updatePosition();
     void interact(Agent *otherAgent);
     void draw();
