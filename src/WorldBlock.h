@@ -25,7 +25,7 @@ public:
 private:
     float x,y,size;
     Boolean fill = false;
-    //unordered_set<Agent*> agents;
+    //vector<Agent*> agents;
 };
 
 #endif /* defined(__firstSketch__WorldBlock__) */

@@ -12,7 +12,7 @@
 Agent::Agent(){
 }
 
-void Agent::init(int id, float x, float y,World * _world){
+void Agent::init(int _id, float x, float y,World * _world){
     xPos = x;
     yPos = y;
     direction = 0;
@@ -21,6 +21,7 @@ void Agent::init(int id, float x, float y,World * _world){
     g = 150;
     b = 150;
     world = _world;
+    id = _id;
 }
 
 void Agent::updatePosition(){}
