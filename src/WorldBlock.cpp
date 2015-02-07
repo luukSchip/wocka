@@ -20,10 +20,13 @@ void WorldBlock::draw(){
     if(true){
         ofFill();
         //int r = ofMap(agents.size(), 0, 20, 0, 255);
-        
-        ofSetColor(0,0,food);
+        int r = 0;
+        if(home){
+            r = 255;
+        }
+        ofSetColor(r,homeScent,0);
         ofRect(x, y, size, size);
-        ofSetColor(255,0,0);
+//        ofSetColor(255,0,0);
         //ofDrawBitmapString(ofToString(agents.size()), x, y + 10, 0);
 //        for(int i = 1; i < agents.size(); i++){
 //            //Agent fromAgent = agents[i-1];
@@ -51,18 +54,19 @@ void WorldBlock::addAgent(Agent* _agent){
 }
 
 void WorldBlock::interactWithAgent(Agent* _agent){
-    food++;
-    if(food > 255){
-        food = 255;
-    }
+//    food++;
+//    if(food > 255){
+//        food = 255;
+//    }
+    //homeScent = homeScent + _agent->homeDist;
 }
 
 void WorldBlock::update(){
-    if(numAgents < 10){
-        if(--food < 0){
-            food = 0;
-        }
-    }
+//    if(numAgents < 10){
+//        if(--food < 0){
+//            food = 0;
+//        }
+//    }
 }
 
 

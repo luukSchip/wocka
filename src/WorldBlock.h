@@ -14,6 +14,7 @@
 
 class Agent;
 class WorldBlock{
+
 public:
     WorldBlock(float x, float y, float size, float food);
     void draw();
@@ -24,6 +25,9 @@ public:
     void update();
     int numAgents = 0;
     float food;
+    bool home = false;
+    int foodScent = 0;
+    int homeScent = 0;
     
 private:
     float x,y,size;

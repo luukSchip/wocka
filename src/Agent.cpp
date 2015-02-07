@@ -51,6 +51,17 @@ void Agent::setWorldBlock(WorldBlock* _worldBlock){
     worldBlock = _worldBlock;
     worldBlock->addAgent(this);
     worldBlock->interactWithAgent(this);
-    speed = ofMap(worldBlock->food, 0, 255, 1.0, 5.0);
+    //speed = ofMap(worldBlock->food, 0, 255, 1.0, 5.0);
+    if(worldBlock->home){
+        homeDist = 100;
+    }
+    if(worldBlock->homeScent < 1){
+        if(--homeDist < 0){
+            homeDist = 0;
+        }
+    }
+    if(homeDist > 0){
+        worldBlock->homeScent ++;
+    }
 }
 

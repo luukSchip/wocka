@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/WorldBlock.h"
-            timestampString = "444951182.164224"
+            timestampString = "445027110.22621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "class WorldBlock"
             landmarkType = "3">
          </BreakpointContent>

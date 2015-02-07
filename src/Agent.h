@@ -19,6 +19,8 @@ class World;
 class WorldBlock;
 class Agent {
     static const int MAX_INTERACT_DIST = 50;
+    static const int GOAL_GATHER_FOOD = 0;
+    static const int GOAL_GO_HOME = 1;
 private:
     WorldBlock *worldBlock = NULL;
     
@@ -44,6 +46,9 @@ public:
     World *world;
     void setWorldBlock(WorldBlock *_worldBlock);
     int speed = 2;
+    int food = 0;
+    int homeDist = 0;
+    int goal = GOAL_GATHER_FOOD;
 };
 
 

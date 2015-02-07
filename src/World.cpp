@@ -24,7 +24,11 @@ void World::initBlocks(){
         for(int j = 0; j < NUM_COLUMNS; j++){
             float xPos = j * blockSize;
             float food = 0;//ofRandom(155) + 100;
-            worldBlocks.push_back(new WorldBlock(xPos,yPos,blockSize,food));
+            WorldBlock* worldBlock = new WorldBlock(xPos,yPos,blockSize,food);
+            if(i == numRows / 2 && j == NUM_COLUMNS / 2){
+                worldBlock->home = true;
+            }
+            worldBlocks.push_back(worldBlock);
         }
     }
 }
