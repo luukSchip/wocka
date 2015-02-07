@@ -50,5 +50,7 @@ void Agent::setWorldBlock(WorldBlock* _worldBlock){
     }
     worldBlock = _worldBlock;
     worldBlock->addAgent(this);
+    worldBlock->interactWithAgent(this);
+    speed = ofMap(worldBlock->food, 0, 255, 1.0, 5.0);
 }
 

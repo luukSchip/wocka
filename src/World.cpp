@@ -23,7 +23,8 @@ void World::initBlocks(){
         float yPos = i * blockSize;
         for(int j = 0; j < NUM_COLUMNS; j++){
             float xPos = j * blockSize;
-            worldBlocks.push_back(new WorldBlock(xPos,yPos,blockSize));
+            float food = 0;//ofRandom(155) + 100;
+            worldBlocks.push_back(new WorldBlock(xPos,yPos,blockSize,food));
         }
     }
 }
@@ -40,6 +41,17 @@ void World::updateAgent(Agent * _agent){
     int xIndex = agentX / blockSize;
     int yIndex = agentY / blockSize;
     int blockIndex = xIndex + (yIndex * NUM_COLUMNS);
-    worldBlocks[blockIndex]->setFill(true);
-    _agent->setWorldBlock(worldBlocks[blockIndex]);
+    if(blockIndex >= 0 && blockIndex < worldBlocks.size()){
+        _agent->setWorldBlock(worldBlocks[blockIndex]);
+    }
 }
+
+void World::updateWorldBlocks(){
+    
+    for(int i = 0; i < numBlocks; i++){
+        worldBlocks[i]->update();
+    }
+}
+
+
+

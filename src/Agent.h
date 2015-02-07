@@ -19,7 +19,6 @@ class World;
 class WorldBlock;
 class Agent {
     static const int MAX_INTERACT_DIST = 50;
-    static const int SPEED = 4;
 private:
     WorldBlock *worldBlock = NULL;
     
@@ -44,6 +43,7 @@ public:
     void interactWithWorld();
     World *world;
     void setWorldBlock(WorldBlock *_worldBlock);
+    int speed = 2;
 };
 
 

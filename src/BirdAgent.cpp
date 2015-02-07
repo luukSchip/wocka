@@ -24,8 +24,8 @@ void BirdAgent::updatePosition(){
     closestAgent = NULL;
     direction = ofRandom(2*PI);
     //direction = fmod((direction + ofRandom(0.1) - 0.05), (PI));
-    xPos = fmod(xPos + sin(direction) * 2,ofGetWindowWidth());
-    yPos = fmod(yPos + cos(direction) * 2,ofGetWindowHeight());
+    xPos = fmod(xPos + sin(direction) * speed,ofGetWindowWidth());
+    yPos = fmod(yPos + cos(direction) * speed,ofGetWindowHeight());
     //size += (ofRandom(0.1) - 0.05);
     adjustToBounds(&size, 2, 7);
     r += (ofRandom(10) - 5);

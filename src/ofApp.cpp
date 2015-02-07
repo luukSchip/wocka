@@ -33,8 +33,8 @@ void ofApp::update(){
             }
         }
         //birdAgents[i].interactWithClosestAgent();
-        
     }
+    world->updateWorldBlocks();
 }
 
 //--------------------------------------------------------------

@@ -20,6 +20,7 @@ public:
     World(float _width, float _height);
     void draw();
     void updateAgent(Agent * _agent);
+    void updateWorldBlocks();
     
 private:
     float width, height, blockSize;

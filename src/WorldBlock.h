@@ -15,17 +15,20 @@
 class Agent;
 class WorldBlock{
 public:
-    WorldBlock(float x, float y, float size);
+    WorldBlock(float x, float y, float size, float food);
     void draw();
     void setFill(Boolean _fill);
     void removeAgent(Agent* _agent);
+    void interactWithAgent(Agent* _agent);
     void addAgent(Agent* _agent);
+    void update();
     int numAgents = 0;
+    float food;
     
 private:
     float x,y,size;
     Boolean fill = false;
-    //vector<Agent*> agents;
+    list<Agent*> agents;
 };
 
 #endif /* defined(__firstSketch__WorldBlock__) */
