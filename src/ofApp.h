@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "BirdAgent.h"
+#include "AntAgent.h"
 #include "Agent.h"
 #include "World.h"
 #include "WorldBlock.h"
@@ -23,6 +23,6 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-        BirdAgent birdAgents[NUM_AGENTS];
+        Agent agents[NUM_AGENTS];
         World * world;
 };

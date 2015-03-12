@@ -12,7 +12,7 @@
 #include "WorldBlock.h"
 #include "Agent.h"
 
-class Agent;
+//class Agent;
 class World {
     static const int NUM_COLUMNS = 50;
     
@@ -21,6 +21,7 @@ public:
     void draw();
     void updateAgent(Agent * _agent);
     void updateWorldBlocks();
+    int score = 0;
     
 private:
     float width, height, blockSize;

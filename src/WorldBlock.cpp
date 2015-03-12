@@ -21,13 +21,20 @@ void WorldBlock::draw(){
         ofFill();
         //int r = ofMap(agents.size(), 0, 20, 0, 255);
         int r = 0;
-        if(home){
-            r = 255;
+        if(!home){
+            ofSetColor(foodScent,homeScent/10,food/2);
+        }else{
+            ofSetColor(0, 0, 0);
         }
-        ofSetColor(r,homeScent,0);
+        if(food > 0){
+            //            ofDrawBitmapString(ofToString(homeScent/10000), x, y + 10, 0);
+            ofSetColor(0, 0, 255);
+        }
         ofRect(x, y, size, size);
-//        ofSetColor(255,0,0);
-        //ofDrawBitmapString(ofToString(agents.size()), x, y + 10, 0);
+        if(food > 0){
+            ofSetColor(255, 255, 255);
+            ofDrawBitmapString(ofToString(food), x, y + 10, 0);
+        }
 //        for(int i = 1; i < agents.size(); i++){
 //            //Agent fromAgent = agents[i-1];
 //            //Agent toAgent = agents[i];
@@ -66,7 +73,13 @@ void WorldBlock::update(){
 //        if(--food < 0){
 //            food = 0;
 //        }
-//    }
+    //    }
+    if(--foodScent < 0){
+        foodScent = 0;
+    }
+    if(--homeScent < 0){
+        homeScent = 0;
+    }
 }
 
 

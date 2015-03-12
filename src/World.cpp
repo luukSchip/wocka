@@ -23,7 +23,12 @@ void World::initBlocks(){
         float yPos = i * blockSize;
         for(int j = 0; j < NUM_COLUMNS; j++){
             float xPos = j * blockSize;
-            float food = 0;//ofRandom(155) + 100;
+            
+            float food = 0;
+            if(ofRandom(500) < 1){
+                //food = ofRandom(255);
+                food = 255;
+            }
             WorldBlock* worldBlock = new WorldBlock(xPos,yPos,blockSize,food);
             if(i == numRows / 2 && j == NUM_COLUMNS / 2){
                 worldBlock->home = true;
@@ -37,6 +42,8 @@ void World::draw(){
     for(int i = 0; i < numBlocks; i++){
         worldBlocks[i]->draw();
     }
+    ofSetColor(255, 255, 255);
+    ofDrawBitmapString(ofToString(score), 10,10, 0);
 }
 
 void World::updateAgent(Agent * _agent){
