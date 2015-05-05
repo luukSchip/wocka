@@ -18,7 +18,7 @@ class WorldBlock{
 public:
     WorldBlock(float x, float y, float size, float food);
     void draw();
-    void setFill(Boolean _fill);
+    void setFill(bool _fill);
     void removeAgent(Agent* _agent);
     void interactWithAgent(Agent* _agent);
     void addAgent(Agent* _agent);
@@ -28,10 +28,10 @@ public:
     bool home = false;
     int foodScent = 0;
     int homeScent = 0;
-    
+
 private:
     float x,y,size;
-    Boolean fill = false;
+    bool fill = false;
     list<Agent*> agents;
 };
 

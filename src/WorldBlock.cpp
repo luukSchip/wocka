@@ -46,7 +46,7 @@ void WorldBlock::draw(){
     }
 }
 
-void WorldBlock::setFill(Boolean _fill){
+void WorldBlock::setFill(bool _fill){
     fill = _fill;
 }
 
